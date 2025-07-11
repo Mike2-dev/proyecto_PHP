@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ff9100;
+    font-family: sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.contenedor {                       /*login*/
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 300px;
+    position:relative;
+    justify-content: center;
+}
+.botonR{                          /*login*/
+    padding: 10px 10px;
+    font-size: 16px;
+    background-color: #e26411;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.contenedor3{                    /*login*/
+    display: flex;
+    flex-direction: row; 
+    gap: 10px;          
+    justify-content: center; 
+    margin-top: 15px;
+}
+
+
+.contenedor1 {                  /* registro */
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 300px;
+    position: relative;   /* Referencia para los absolute internos */
+}
+
+/* Botón “Registrar Usuario” (abajo‑izquierda) */
+.botonregistrar {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;            /* ← unidad añadida */
+}
+
+/* Botón “Regresar” (arriba‑derecha) */
+.contenedor2 {
+    position: absolute;
+    top: 3px;
+    right: 20px;
+}
+
+.boton-regresar,            /* estilos compartidos */
+.boton-registrar {
+    padding: 10px 10px;
+    font-size: 16px;
+    background-color: #e26411;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
+}
+.boton-regresar:hover,
+.boton-registrar:hover {
+    background-color: #c2500d;
+}
+
+
+}
+.Mensaje de error{
+    color: red;
+    margin-bottom: 10px;
+}
+
+.bloqueo-horario {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 300px;
+    
+}
+@keyframes aparecer {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.bloqueo-horario {
+    animation: aparecer 3s ease;
+}
