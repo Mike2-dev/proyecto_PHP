@@ -2,7 +2,7 @@
 include 'db.php';
 $tipo = $_POST['tipo'] ?? '';
 $nombre = $_POST['nombre'] ?? '';
-$precio = $_POST['precio'] ?? '';
+$precio = number_format($_POST['precio'], 2);
 $id = '';
 $mensaje = '';
 $productos_por_tipo = [];
