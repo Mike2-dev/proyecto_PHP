@@ -22,6 +22,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         if (empty($nombre) || empty($contrasena) || empty($contrasena2) || empty($correo) || empty($telefono) || empty($direccion)) {
             $mensaje = "Completa todos los campos";
+        }  elseif (!filter_var($correo, FILTER_VALIDATE_EMAIL)) {
+            $mensaje = "El correo no es válido";
+        } elseif (!preg_match('/^\d{10}$/', $telefono)) {
+            $mensaje = "El teléfono debe tener 10 dígitos";
         } elseif ($contrasena !== $contrasena2) {
             $mensaje = "Las contraseñas no coinciden";
         } elseif (!preg_match('/^(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/', $contrasena)) {
